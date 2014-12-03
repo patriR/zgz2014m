@@ -31,48 +31,47 @@
 * 
 **/
 
-function parseURL($data)
+function parseURL($url)
 {
     $result = array();
     include_once '../modules/Application/src/Application/controllers/lista.php';
-    
-    if(sizeof($data) >= 2)
+
+    if(sizeof($url) <= 2)
     {
         //Se accede al directorio raiz, controlador y accion por defecto
         $result = array ('controller'=>'users',
             'action'=>'select'
         );
     } 
-    elseif(in_array($data[1],$validControllers))
+    elseif(in_array($url[1],$validControllers))
     {//Pertenece a la colección de controladores
-        $result = array ('controller'=>$data[1]);
+        $result = array ('controller'=>$url[1]);
         //Comprobar la acción, en la colección de acciones válidas del controlador
-        include_once '../modules/Application/src/Application/controllers/users.php';
-        //No lee el fichero users.php, las pongo aquí
+        //include_once '../modules/Application/src/Application/controllers/users.php';
         
         //Si la acción está en el array de acciones del controlador, es válida
-        if(sizeof($data) == 2)
+        if(sizeof($url) == 2)
         {
             //Acción por defecto para el controlador ($default de users.php)
             $result['accion']= 'select';
         }
-        elseif(in_array($data[2],$validActions[$data[1]]))
+        elseif(in_array($url[2],$validActions[$result['controller']]))
         {
             //Parámetros de la acción
-            if(sizeof($data)%2 == 0){
+            if(sizeof($url)%2 == 0){
                 //Hay algún parámetro sin valor
                 $result = array ('controller'=>'error',
                     'action'=>'405'
                 );
             }
             else{
-                $result['accion']= $data[2];
+                $result['accion']= $url[2];
                 $i=3;
-                while($i < sizeof($data))
+                while($i < sizeof($url))
                 {
                     //Indice impar, nombre del parámetro
                     //Indice par, valor del parámetro
-                    $result['params'][$data[$i]]= $data[$i+1];
+                    $result['params'][$url[$i]]= $url[$i+1];
                     $i++;
                 }
             }
