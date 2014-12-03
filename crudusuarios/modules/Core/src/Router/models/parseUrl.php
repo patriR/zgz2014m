@@ -72,7 +72,7 @@ function parseURL($url)
                     //Indice impar, nombre del parámetro
                     //Indice par, valor del parámetro
                     $result['params'][$url[$i]]= $url[$i+1];
-                    $i++;
+                    $i = $i+2;
                 }
             }
         }
