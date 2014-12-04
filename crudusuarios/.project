@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>crudusuarios2</name>
+=======
+	<name>crudusuarios</name>
+>>>>>>> 756494e6a161eb2f70c44e5297410d745dbcc570
 	<comment></comment>
 	<projects>
 	</projects>
