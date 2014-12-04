@@ -19,8 +19,9 @@ $data = explode('/', $_SERVER['REQUEST_URI']);
 // print_r($data);
 // echo "</pre>";
 
-
-include_once '../modules/Core/src/Router/models/parseUrl.php';
+include_once '../vendor/generadorUUID.php';
+ 
+/*include_once '../modules/Core/src/Router/models/parseUrl.php';
 
 $request = parseURL($_SERVER['REQUEST_URI']);
 
@@ -34,15 +35,23 @@ switch($request['controller'])
         $view=ob_get_contents();
         ob_end_clean();
     break;
-    case 'error':
-        $section = 'Error';
+    
+    case 'generadorUUID':
+        echo "generador";
         ob_start();
-        include_once '../modules/Application/src/Application/controllers/error.php';
+        include_once '../modules/Application/src/Application/controllers/generadorUUID.php';
         $view=ob_get_contents();
         ob_end_clean();
-    break;
+        break;
+    case 'error':
+         $section = 'Error';
+         ob_start();
+         include_once '../modules/Application/src/Application/controllers/error.php';
+         $view=ob_get_contents();
+         ob_end_clean();
+        break;
 }
 
 
 include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
-
+*/
