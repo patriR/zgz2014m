@@ -23,7 +23,7 @@ echo "</pre>";
 
 // include_once '../modules/Core/src/Router/models/parseUrl.php';
 
-// $url = parseURL();
+// $request = parseURL();
 
 $request = array ('controller'=>'users', 
               'action'=>'select'
