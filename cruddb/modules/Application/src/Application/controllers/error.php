@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Selects and sets the error response and show text error
  * 

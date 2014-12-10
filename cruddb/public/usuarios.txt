@@ -1,10 +1,3 @@
 |Calderon|Agustin|zaqweszZ|agustincl@gmail.com|BlaBlaBlas|others|barcelona|cat,dog|french,german|Enviar|Koala.jpg
 |KKKK|kkkkk|kkkkkkkKkkkk|kkkk|k|others|zaragoza|cat|english|Enviar|
-<<<<<<< HEAD
-<<<<<<< HEAD
 |kkkk|kkkk|kkkkkkk788U|kk@kk.es|werwerwerwer|others|zaragoza|cat,dog|french,german|Enviar|
-=======
->>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
-=======
-|kkkk|kkkk|kkkkkkk788U|kk@kk.es|werwerwerwer|others|zaragoza|cat,dog|french,german|Enviar|
->>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b

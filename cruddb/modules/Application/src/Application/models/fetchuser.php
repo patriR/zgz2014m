@@ -5,9 +5,10 @@
  * @param int $id
  * @return array
  */
-
 function fetchUser($config, $id)
 {
+    
+
     switch ($config['repository'])
 	{
 		case 'txt':

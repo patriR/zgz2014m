@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Hidrate user data
  * 
@@ -13,8 +11,6 @@ function hydrateUser($config,$usuario)
     switch ($config['repository'])
     {
         case 'txt':
-
-
             $values = array ('id'=>$usuario[0],
                 'lastname'=>$usuario[1],
                 'name'=>$usuario[2],
@@ -42,6 +38,5 @@ function hydrateUser($config,$usuario)
         break;
     }
 }
-
             
 

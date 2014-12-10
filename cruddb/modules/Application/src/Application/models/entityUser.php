@@ -13,4 +13,3 @@ $user = array ('id'=>'',
     'languages'=>array(),
     'photo'=>''    
 );
-

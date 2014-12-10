@@ -5,13 +5,11 @@ segun la url. Dependiendo del controlador introducido en la url, se incluye un a
 u otro de los controllers
 */
 
-const DEFAULT_CONTROLLER = 'users';
-const DEFAULT_ACTION = 'select';
- 
+const DEFAULT_CONTROLLER = 'home';
+const DEFAULT_ACTION = 'select'; 
 
 function parseURL()
 {   
-
     // Elimina las barras del principio y del final de la url
     $url = trim($_SERVER['REQUEST_URI'], '/');
     // Divide el string url por las barras y lo mete en un array
@@ -20,7 +18,6 @@ function parseURL()
 
     // Si la url solo consta del dominio se utiliza el controlador y la accion por defecto
     // en este caso el controlador user y la accion select
-
     if (empty($parts[0])) {
         $controller = DEFAULT_CONTROLLER;
         $action = DEFAULT_ACTION;
@@ -38,7 +35,7 @@ function parseURL()
             $action = isset($parts[1]) ? $parts[1] : '';
                
 
-            $validActions = array ('insert', 'update', 'delete', 'select');
+            $validActions = array ('insert', 'update', 'delete', 'select', 'index', 'logout');
 
             // Si la accion es un valor valido...
             if (in_array($action, $validActions)) {
