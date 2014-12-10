@@ -29,7 +29,7 @@ switch ($request['action']){
                header("Location: /users/select");
            } else
            {
-               header("Location: /error");
+               header("Location: /login/index");
            }
        
        }
