@@ -5,8 +5,9 @@ $config = array(
         'user'=>'username',
         'password'=>'password',
         'host'=>'localhost',
-        'database'=>'cruddb_db'
+        'database'=>'usuarios'
     ),
     'repository'=>'db|txt|gd',
     'layout'=>'dashboard'
 );
+

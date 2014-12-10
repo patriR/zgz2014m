@@ -48,4 +48,3 @@ function deleteUser($config,$id)
     }
        
 }
-

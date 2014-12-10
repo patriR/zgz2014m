@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Update data of an user
  *
@@ -129,5 +130,3 @@ function updateUser($filter, $config)
         break;     
     }   
 }
-
-

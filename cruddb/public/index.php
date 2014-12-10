@@ -26,12 +26,14 @@ switch($request['controller'])
         $view=ob_get_contents();
         ob_end_clean();
     break;
+
     case 'timeline':
         ob_start();
         include_once '../modules/Application/src/Application/controllers/timeline.php';
         $view=ob_get_contents();
         ob_end_clean();
         break;
+
     case 'error':
         ob_start();
             include_once '../modules/Application/src/Application/controllers/error.php';

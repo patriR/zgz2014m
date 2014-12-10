@@ -1,4 +1,5 @@
 <?php
+
 //Definition or user identity array
 
 $user = array ('id'=>'',
@@ -13,3 +14,4 @@ $user = array ('id'=>'',
     'languages'=>array(),
     'photo'=>''    
 );
+

@@ -1,34 +1,31 @@
 <?php
 
-function moduleManager($configfile)
+function moduleManager($config)
 {
+    include_once $config;
     
-    echo $configfile;
-    include_once $configfile;
+    $globalConfig = array();
+    $localConfig = array();
     
-    $globalConfig=array();
-    $localConfig=array();
-      
     foreach($config['modules'] as $module)
-    {   
-
+    {
         $globalFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.global.php';
-
         if(file_exists($globalFile))
         {
             include_once $globalFile;
-            $globalConfig = $config;
+            $globalConfig = $globalFile;
         }
         
-
         $localFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.local.php';
         if(file_exists($localFile))
         {
             include_once $localFile;
-            $localConfig = $config;
+            $localConfig = $localFile;
+    
         }
-        $config = array_replace_recursive($config, $globalConfig, $localConfig);
-    }   
-        
+    }
+    //Problema: lo hace solo para un modulo, añado $config
+    //array_replace_recursive($globalConfig,$localConfig);
+    array_replace_recursive($config,$globalConfig,$localConfig);
     return $config;
 }

@@ -87,4 +87,3 @@ function createUser($filter, $imagename, $config)
     }
     
 }
-
