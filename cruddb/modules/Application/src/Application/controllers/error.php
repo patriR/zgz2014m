@@ -7,7 +7,6 @@
  * @return nothing shows a messagge of error
  */
 
-
 switch ($request['action']){
     case 100: $text = 'Continue'; break;
     case 101: $text = 'Switching Protocols'; break;

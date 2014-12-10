@@ -130,3 +130,4 @@ function updateUser($filter, $config)
         break;     
     }   
 }
+

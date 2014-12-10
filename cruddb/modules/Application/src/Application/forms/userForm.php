@@ -113,7 +113,6 @@ $userForm = array(
     'languages'=> array(
         'type'=>'selectmultiple',
         'name'=>'languages',
-
         'options'=>array('english'=>'Inglés', 
                         'french'=>'Francés', 
                         'german'=>'Alemán',

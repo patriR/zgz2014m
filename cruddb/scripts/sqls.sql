@@ -1,18 +1,24 @@
 -- Insertar datos en gender
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 INSERT INTO genders (gender) VALUES ('m'); 
 INSERT INTO genders (gender) VALUES ('h'); 
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 INSERT INTO genders (gender) VALUES ('o'); 
 
 -- Insertar datos en languages
 INSERT INTO languages (language) VALUES ('Castellano');
 INSERT INTO languages (language) VALUES ('English');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 INSERT INTO languages (language) VALUES ('French');
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 
 -- Insertar datos en pets
 INSERT INTO pets (pet) VALUES ('Gato');
@@ -20,6 +26,7 @@ INSERT INTO pets (pet) VALUES ('Tigre');
 INSERT INTO pets (pet) VALUES ('Lince');
 INSERT INTO pets (pet) VALUES ('Puma');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 -- Inserta un usuario
 INSERT INTO users SET 
@@ -40,6 +47,10 @@ INSERT INTO users SET
 
 INSERT INTO users SET 
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+-- Inserta un usuario
+INSERT INTO users SET 
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 			iduser = 'b8633638-dfad-4b6c-8fae-6aaf91e23e14',
 			name = 'Agustin',
             lastname = 'Calderon',
@@ -48,24 +59,34 @@ INSERT INTO users SET
             description = 'descripcion',
             photo = 'image.png',
 <<<<<<< HEAD
+<<<<<<< HEAD
             cities_idcity = 1,
 =======
             cities_idcity = 2,
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+            cities_idcity = 1,
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
             genders_idgender = 3;
 
 -- Update un usuario
 UPDATE users SET 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 			name = 'Sebastian',
             lastname = 'Calderon'
 WHERE 
 iduser = 'b8633638-dfad-4b6c-8fae-6aaf91e23e14';
+<<<<<<< HEAD
 =======
             cities_idcity = 3 
 WHERE 
 iduser = 'ab593a08-a693-46e7-ada9-eb66c1877eb1';
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 	
 INSERT INTO users SET 
 			iduser = '4ea8f86a-0488-42cd-9730-cfdb0974c395',
@@ -87,6 +108,9 @@ iduser = '4ea8f86a-0488-42cd-9730-cfdb0974c395';
 -- Insertar lenguajes al usuario
 INSERT INTO users_has_languages SET
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 		users_iduser = '846f600e-7baa-11e4-b116-123b93f75cba',
         languages_idlanguage =1;
 
@@ -94,6 +118,7 @@ INSERT INTO users_has_languages SET
 		users_iduser = '846f600e-7baa-11e4-b116-123b93f75cba',
         languages_idlanguage =2;        
         
+<<<<<<< HEAD
 =======
 		users_iduser = 'ab593a08-a693-46e7-ada9-eb66c1877eb1',
         languages_idlanguage =1;
@@ -112,6 +137,8 @@ INSERT INTO users_has_pets SET
         
         
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 -- SELECT usuarios
 SELECT * FROM users;
 SELECT name, email FROM users;

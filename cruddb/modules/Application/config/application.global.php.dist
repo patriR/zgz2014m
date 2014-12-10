@@ -1,8 +1,12 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Base of Global identities configuration settings on $config variable to redistribute
 =======
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+// Base of Global identities configuration settings on $config variable to redistribute
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
 $config = array(
 	'database'=>array(
         'user'=>'username',
@@ -13,7 +17,11 @@ $config = array(
     'repository'=>'db|txt|gd',
     'layout'=>'dashboard'
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
 );
 >>>>>>> 5a619d9623087ec6898acf1171f4b3ff0217cd8e
+=======
+);
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b

@@ -8,5 +8,4 @@ $config = array(
         //'Timeline',
         //'Door'
     )
-
 );

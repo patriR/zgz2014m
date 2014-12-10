@@ -2,8 +2,11 @@
 
 function moduleManager($configfile)
 {
+<<<<<<< HEAD
     
     echo $configfile;
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
     include_once $configfile;
     
     $globalConfig=array();
@@ -11,7 +14,10 @@ function moduleManager($configfile)
       
     foreach($config['modules'] as $module)
     {   
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
         $globalFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.global.php';
 
         if(file_exists($globalFile))
@@ -20,7 +26,10 @@ function moduleManager($configfile)
             $globalConfig = $config;
         }
         
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2154e67bf3659eb83eab35fa977f7f2d7077b02b
         $localFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.local.php';
         if(file_exists($localFile))
         {

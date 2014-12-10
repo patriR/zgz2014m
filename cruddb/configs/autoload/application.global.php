@@ -10,4 +10,3 @@ $config = array(
     'repository'=>'db|txt|gd',
     'layout'=>'dashboard'
 );
-

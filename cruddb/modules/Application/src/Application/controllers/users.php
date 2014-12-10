@@ -104,7 +104,6 @@ switch ($request['action'])
             $valid = validateForm($userdeleteForm, $filter);
             if($valid['valid'] && $_POST['borrar']=='Si')
             deleteUser($config,$filter['id']);            
-            
             header("Location: /users/select");            
         }        
         else 
@@ -118,4 +117,3 @@ switch ($request['action'])
         }           
     break;
 }
-
