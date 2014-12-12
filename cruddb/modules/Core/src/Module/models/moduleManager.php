@@ -1,25 +1,23 @@
 <?php
 
-
-function moduleManager($config)
+function moduleManager($configfile)
 {
-    include_once $config;
-        
+    include_once $configfile;
+    
     $globalConfig=array();
     $localConfig=array();
       
     foreach($config['modules'] as $module)
     {   
-        $globalFile = __DIR__.'/../../../../../configs/autoload/'.
-                        strtolower($module).'.global.php';
+    $globalFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.global.php';
+
         if(file_exists($globalFile))
         {
             include_once $globalFile;
             $globalConfig = $config;
         }
         
-        $localFile = __DIR__.'/../../../../../configs/autoload/'.
-                        strtolower($module).'.local.php';
+        $localFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.local.php';
         if(file_exists($localFile))
         {
             include_once $localFile;

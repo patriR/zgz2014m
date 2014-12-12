@@ -1,50 +1,54 @@
 <?php
 
-// echo "<pre>Post: ";
-// print_r($_POST);
-// echo "</pre>";
-
-// echo "<pre>Get: ";
-// print_r($_GET);
-// echo "</pre>";
-
-// echo "<pre>Files: ";
-// print_r($_FILES);
-// echo "</pre>";
-
-
 $data = explode('/', $_SERVER['REQUEST_URI']);
-
-// echo "<pre>".$_SERVER['REQUEST_URI'];
-// print_r($data);
-// echo "</pre>";
-
-
 include_once '../modules/Core/src/Router/models/parseUrl.php';
-
 $request = parseURL($_SERVER['REQUEST_URI']);
-
 
 include_once '../modules/Core/src/Module/models/moduleManager.php';
 $config = moduleManager(__DIR__.'/../configs/global.php');
 
+Session_start();
+
 switch($request['controller'])
 {
     default:
+    case 'home':
+        ob_start();
+        include_once '../modules/Application/src/Application/controllers/home.php';
+        $view=ob_get_contents();
+        ob_end_clean();
+        include_once '../modules/Application/src/Application/layouts/home.phtml';
+    break;
+    case 'login':
+        ob_start();
+        include_once '../modules/Application/src/Application/controllers/login.php';   
+        $view=ob_get_contents();
+        ob_end_clean();
+        include_once '../modules/Application/src/Application/layouts/signin.phtml';
+    break;
+    case 'timeline':
+        ob_start();
+            include_once '../modules/Application/src/Application/controllers/timeline.php';   
+        $view=ob_get_contents();
+        ob_end_clean();
+        include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
+    break;
     case 'users':
         ob_start();
             include_once '../modules/Application/src/Application/controllers/users.php';
-        $view=ob_get_contents();
+        $view=ob_get_contents();       
         ob_end_clean();
-    break;
+
+        include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
+        break;
+
     case 'error':
         ob_start();
             include_once '../modules/Application/src/Application/controllers/error.php';
-        $view=ob_get_contents();
+        $view=ob_get_contents();       
         ob_end_clean();
-    break;
+        //include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
+        break;
 }
 
-
-include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
 
