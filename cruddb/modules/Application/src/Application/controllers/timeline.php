@@ -1,22 +1,4 @@
 <?php
-<<<<<<< HEAD
-switch ($request['action'])
-{
-    case 'insert':
-        include('../modules/Application/src/Application/views/timeline/insert.phtml');
-    break;
-    case 'update':
-        include('../modules/Application/src/Application/views/timeline/update.phtml');
-    break;
-    default:
-    case 'select':
-        include('../modules/Application/src/Application/views/timeline/select.phtml');
-    break;
-    case 'delete':
-        include('../modules/Application/src/Application/views/timeline/delete.phtml');     
-    break;
-}
-=======
 
 include_once '../modules/Core/src/Forms/models/validateForm.php';
 include_once '../modules/Core/src/Forms/models/filterForm.php';
@@ -42,4 +24,3 @@ switch ($request['action'])
         break;
 }
 
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98

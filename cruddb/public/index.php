@@ -50,8 +50,6 @@ switch($request['controller'])
         //include_once '../modules/Application/src/Application/layouts/dashboard.phtml';
         break;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98
+
 

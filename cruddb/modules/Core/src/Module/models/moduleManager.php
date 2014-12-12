@@ -9,11 +9,7 @@ function moduleManager($configfile)
       
     foreach($config['modules'] as $module)
     {   
-<<<<<<< HEAD
-    $globalFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.global.php';
-=======
         $globalFile = __DIR__.'/../../../../../configs/autoload/'.strtolower($module).'.global.php';
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98
 
         if(file_exists($globalFile))
         {

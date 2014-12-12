@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
 
-=======
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98
 /**
  * Update data of an user
  *
@@ -133,8 +130,3 @@ function updateUser($filter, $config)
         break;     
     }   
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98

@@ -23,10 +23,7 @@ function parseURL()
         $action = DEFAULT_ACTION;
         $params = [];
         
-<<<<<<< HEAD
-=======
-        
->>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98
+
     } else {
         $controller = $parts[0];
         // Si hay algo en la url ademas del dominio se llama al archivo 
