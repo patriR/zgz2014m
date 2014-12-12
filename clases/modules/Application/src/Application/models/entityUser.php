@@ -28,6 +28,5 @@ class entityUser implements HydrateInterface
         echo "extract";
     }
     
-   
-    
+
 }

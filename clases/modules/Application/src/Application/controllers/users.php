@@ -16,7 +16,6 @@ include_once '../modules/Application/src/Application/models/hydrateUser.php';
 include_once '../modules/Application/src/Application/models/uuid.php';
 
 
-
 $validActions = array ('insert', 'update', 'delete', 'select');
 
 
@@ -51,7 +50,7 @@ class users
             include('../modules/Application/src/Application/views/users/insert.phtml');
         }
     }
-    
+  
     public function update()
     {
         // Si POST
@@ -122,5 +121,3 @@ class users
     
     
 }
-
-

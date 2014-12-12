@@ -10,7 +10,3 @@ if(isset($_SERVER['APPLICATION_ENV']))
 \Core\Application\Application::setConfig(__DIR__.'/../configs/global.php');
 \Core\Application\Application::bootstrap();
 \Core\Application\Application::dispatch();
-
-
-
-

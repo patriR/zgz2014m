@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98
 /**
  * Hidrate user data
  * 
@@ -40,3 +43,7 @@ function hydrateUser($config,$usuario)
     }
 }
             
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8e1802732c9b668569f6966005d85dbf58da2f98

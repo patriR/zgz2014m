@@ -27,6 +27,7 @@ switch ($request['action'])
                $config['database']['password']);
            // Seleccionar la DB
            mysqli_select_db($link, $config['database']['database']);
+           
            // SELECT * FROM users WHERE id;
            	
            $sql = "SELECT iduser, name, email FROM users
