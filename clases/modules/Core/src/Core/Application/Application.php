@@ -8,14 +8,13 @@ class Application
     
     public static function setConfig($config)
     {
-        include_once '../modules/Core/src/Router/models/parseUrl.php';
-        include_once '../modules/Core/src/Module/models/moduleManager.php';
-        
-       
-        
-        self::$request = parseURL($_SERVER['REQUEST_URI']);
+        include_once '../modules/Core/Router/ParseUrl.php';
+        include_once '../modules/Core/Module/ModuleManager.php';
+            
         self::$config = moduleManager($config);
+        self::$request = \Core\Router\ParseUrl::parseURL();
     }
+    
     
     public static function bootstrap()
     {
@@ -52,4 +51,11 @@ class Application
     {
         return self::$config;
     }
+    
+    public static function getRequest() 
+    {
+        return self::$request;
+    }
+
+
 }
