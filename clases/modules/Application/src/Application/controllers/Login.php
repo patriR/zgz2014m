@@ -5,6 +5,8 @@ class Login
 {
     public $layout = 'index.phtml';
     
+    
+    
     public function logout()
     {
         unset($_SESSION['email']);
