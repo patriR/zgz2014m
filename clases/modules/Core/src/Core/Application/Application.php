@@ -8,11 +8,8 @@ class Application
     
     public static function setConfig($config)
     {
-        include_once '../modules/Core/Router/ParseUrl.php';
-        include_once '../modules/Core/Module/ModuleManager.php';
-            
-        self::$config = moduleManager($config);
-        self::$request = \Core\Router\ParseUrl::parseURL();
+        self::$config = \Core\Module\ModuleManager::moduleManager($config);
+        self::$request = \Core\Router\ParseUrl::parseURL();        
     }
     
     
@@ -26,7 +23,8 @@ class Application
                 
         $controllerFile ='../modules/Application/src/Application/controllers/'.
                     self::$request['controller'].'.php';
-//         echo $controllerFile;
+        //echo $controllerFile;
+
 //         include_once $controllerFile;       
         
         ob_start();

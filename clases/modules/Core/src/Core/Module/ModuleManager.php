@@ -1,8 +1,9 @@
 <?php
 namespace Core\Module;
 
-class Application
+class ModuleManager
 {
+    
     public static function moduleManager($configfile)
     {
         include_once $configfile;

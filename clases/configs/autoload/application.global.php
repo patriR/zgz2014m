@@ -8,5 +8,8 @@ $config = array(
         'database'=>'cruddb_db'
     ),
     'repository'=>'db|txt|gd',
-    'layout'=>'dashboard'
+    'layout'=>'dashboard',
+    'filename'=> 'usuarios.txt',
+    'default_controller'=>'index',
+    'default_action'=>'index'
 );

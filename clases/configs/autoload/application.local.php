@@ -9,6 +9,6 @@ $config = array(
     'repository'=>'db',
     'adapter'=>'\Core\Adapters\Mysql',
     'filename'=> 'usuarios.txt',
-    'default_controller'=>'home',
+    'default_controller'=>'Home',
     'default_action'=>'select'
 );

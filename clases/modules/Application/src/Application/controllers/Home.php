@@ -14,5 +14,9 @@ class Home
         // Send to authentication controller with login action
         header("Location: /authentication/login");
     }
-    
+
 }
+
+
+
+
