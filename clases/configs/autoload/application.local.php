@@ -6,5 +6,6 @@ $config = array(
         'password'=>'1234',
 	    'database'=>'usuarios'
     ),
-    'repository'=>'db'    
+    'repository'=>'db',
+    'adapter'=>'\Core\Adapters\Mysql' 
 );

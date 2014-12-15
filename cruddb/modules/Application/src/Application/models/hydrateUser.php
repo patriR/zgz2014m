@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Hidrate user data
  * 
@@ -39,4 +40,3 @@ function hydrateUser($config,$usuario)
     }
 }
             
-

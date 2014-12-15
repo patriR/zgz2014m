@@ -14,8 +14,10 @@ include_once '../modules/Application/src/Application/models/hydrateUser.php';
 include_once '../modules/Application/src/Application/models/uuid.php';
 
 
-
 $validActions = array ('insert', 'update', 'delete', 'select');
+
+if(!isset($_SESSION['email']))    
+    header("Location: /home/select");
 
 switch ($request['action'])
 {

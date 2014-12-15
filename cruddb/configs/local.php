@@ -8,4 +8,3 @@ $config = array(
         //'Door'
     )
 );
-

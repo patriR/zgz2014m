@@ -2,8 +2,17 @@
 
 function __autoload($class)
 {
-    echo $class;
-    $controllerFile = '../modules/Application/src/Application/controllers/'.$class.'.php';
-    include_once $controllerFile;
+    $class = explode("\\", $class);
     
+    $path ='';
+    $file = array_pop($class);
+    foreach ($class as $value)
+    {
+        $path .=$value."/";
+    }
+    $module = array_shift($class);
+    
+    $path.=$file.".php";
+    
+    include "../modules/".$module."/src/".$path;    
 }

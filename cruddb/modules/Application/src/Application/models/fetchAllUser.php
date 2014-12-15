@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Fetch all users on the same array
  * 

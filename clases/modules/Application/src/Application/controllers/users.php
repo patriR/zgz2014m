@@ -1,4 +1,6 @@
 <?php
+namespace Application\controllers;
+
 
 include_once '../modules/Core/src/Forms/models/validateForm.php';
 include_once '../modules/Core/src/Forms/models/filterForm.php';
@@ -17,10 +19,14 @@ include_once '../modules/Application/src/Application/models/uuid.php';
 $validActions = array ('insert', 'update', 'delete', 'select');
 
 
+// if(!isset($_SESSION['email']))    
+//     header("Location: /home/select");
+
 class users
 {
-    private $config;
-    public $layout = "dashboard.phtml";
+    
+    public $layout = 'dashboard.phtml';
+    
     public function insert()
     {
         if($_POST)
@@ -44,8 +50,10 @@ class users
             include('../modules/Application/src/Application/views/users/insert.phtml');
         }
     }
+  
     public function update()
     {
+        // Si POST
         if($_POST)
         {
             $filter = filterForm($userForm, $_POST);
@@ -69,14 +77,8 @@ class users
             // Cargar el formulario con datos
             include('../modules/Application/src/Application/views/users/update.phtml');
         }
-        
     }
-    public function select()
-    {
-        $data = fetchAllUser(application::getConfig());
-        include ("../modules/Application/src/Application/views/users/select.phtml");
-        
-    }
+    
     public function delete()
     {
         if($_POST)
@@ -100,4 +102,22 @@ class users
             include('../modules/Application/src/Application/views/users/delete.phtml');
         }
     }
+    
+    public function select()
+    {
+        $mapper = new Application\Mappers\Users();
+        $users = $mapper->fetchAllUsers();
+        
+        echo "<pre>";
+        print_r($users);
+        echo "</pre>";
+        die;
+        
+        
+        
+        $data = fetchAllUser(\Core\Application\Application::getConfig());
+        include ("../modules/Application/src/Application/views/users/select.phtml");
+    }
+    
+    
 }

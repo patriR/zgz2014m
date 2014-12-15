@@ -5,6 +5,7 @@
  * @param int $id
  * @return array
  */
+
 function fetchUser($config, $id)
 {
     // Leer los datos del usuario por ID

@@ -1,11 +1,13 @@
 <?php
-//Definition or user identity array
+namespace Application\models;
 
-class entityUser
+use Core\Entity\HydrateInterface;
+
+class entityUser implements HydrateInterface
 {
     private $id;
-    public $lastname;
-    public $name;
+    protected $lastname;
+    protected $name;
     private $password;
     protected $email;
     public $description;
@@ -13,6 +15,18 @@ class entityUser
     public $city;
     public $pets;
     public $languages;
-    public $photo;
-     
+    public $photo;   
+    
+    
+    public function hydrate($data)
+    {
+        echo "hydrate";
+    }
+    
+    public function extract()
+    {
+        echo "extract";
+    }
+    
+
 }
