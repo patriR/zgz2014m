@@ -12,7 +12,7 @@ class Home
     public function login()
     {
         // Send to authentication controller with login action
-        header("Location: /authentication/login");
+        header("Location: /login/index");
     }
 
 }

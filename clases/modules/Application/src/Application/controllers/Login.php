@@ -3,8 +3,7 @@ namespace Application\controllers;
 use \Core\Application;
 class Login
 {
-    public $layout = 'index.phtml';
-    
+    public $layout = 'signin.phtml';
     
     
     public function logout()
@@ -21,9 +20,9 @@ class Login
         {
             // Conectarse al DBMS
             
-            $link = mysqli_connect(Application::getConfig()['database']['host'],
-                Application::getConfig()['database']['user'],
-                Application::getConfig()['database']['password']);
+            $link = mysqli_connect(\Core\Application\Application::getConfig()['database']['host'],
+                \Core\Application\Application::getConfig()['database']['user'],
+                \Core\Application\Application::getConfig()['database']['password']);
             // Seleccionar la DB
             mysqli_select_db($link, Application::getConfig()['database']['database']);
              
@@ -50,7 +49,7 @@ class Login
         }
         else
         {
-            //include('../modules/Application/src/Application/layouts/index.phtml');
+            include('../modules/Application/src/Application/views/login/index.phtml');
         }
         
     }
